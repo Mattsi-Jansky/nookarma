@@ -33,35 +33,6 @@ namespace Jansk.Karma.Tests.Plugins
             );
         }
 
-        public static IEnumerable<object[]> GetInvalidInputs()
-        {
-            return GenerateArgumentsFromInputs(
-                ("Test", ""),
-                (" Test ", ""),
-                ("TestPlusPlus", ""),
-                ("TestMinusMinus", ""),
-                ("I hate microsoft for doing bad things", ""),
-                ("I love microsoft because they do good things", ""),
-                ("++", ""),
-                ("--", ""),
-                ("+++", ""),
-                ("---", ""),
-                ("--+", ""),
-                ("++-", ""),
-                ("this ++is not a matching phrase", ""),
-                ("this++is not a matchin phrase", ""),
-                ("++this is not a matching phrase", ""),
-                ("-++-", ""),
-                ("+--+", ""),
-                ("I think C++ is an okay language", ""),
-                ("`preformatted++`", ""),
-                ("`so preformatted++`", ""),
-                ("`preformatted++ to the max`", ""),
-                ("`preformatted`++", ""),
-                ("`this doesn't++ have any preformatted tags itself but is inside preformatted tags`", "")
-            );
-        }
-
         public static IEnumerable<object[]> GetValidReasonInputs()
         {
             return GenerateArgumentsFromInputs(
@@ -92,9 +63,38 @@ namespace Jansk.Karma.Tests.Plugins
             Assert.Equal(expectedMatch, matches[0].Value);
         }
 
+        public static IEnumerable<object[]> GetInvalidInputs()
+        {
+            return new List<string[]>
+            {
+                new[] {"Test"},
+                new[] {" Test "},
+                new[] {"TestPlusPlus"},
+                new[] {"TestMinusMinus"},
+                new[] {"I hate microsoft for doing bad things"},
+                new[] {"I love microsoft because they do good things"},
+                new[] {"++"},
+                new[] {"--"},
+                new[] {"+++"},
+                new[] {"---"},
+                new[] {"--+"},
+                new[] {"++-"},
+                new[] {"this ++is not a matching phrase"},
+                new[] {"this++is not a matchin phrase"},
+                new[] {"++this is not a matching phrase"},
+                new[] {"-++-"},
+                new[] {"+--+"},
+                new[] {"I think C++ is an okay language"},
+                new[] {"`preformatted++`"},
+                new[] {"`so preformatted++`"},
+                new[] {"`preformatted++ to the max`"},
+                new[] {"`preformatted`++"},
+                new[] {"`this doesn't++ have any preformatted tags itself but is inside preformatted tags`"}
+            };
+        }
         [Theory]
         [MemberData(nameof(GetInvalidInputs))]
-        public void ShouldNotMatchInvalidInputs(string input, string expectedMatch)
+        public void ShouldNotMatchInvalidInputs(string input)
         {
             int expectedCount = 0;
             var plugin = new KarmaPlugin();
