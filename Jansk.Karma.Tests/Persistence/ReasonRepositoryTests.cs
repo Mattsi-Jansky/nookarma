@@ -65,7 +65,7 @@ namespace Jansk.Karma.Tests.Persistence
         private ReasonRepository CreateRepository()
         {
             InitContext();
-            return new ReasonRepository(_context);
+            return new ReasonRepository(Context);
         }
     }
 }

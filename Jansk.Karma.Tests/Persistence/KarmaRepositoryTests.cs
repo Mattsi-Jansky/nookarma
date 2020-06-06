@@ -148,7 +148,7 @@ namespace Jansk.Karma.Tests.Persistence
         private KarmaRepository CreateRepository()
         {
             InitContext();
-            return new KarmaRepository(_context);
+            return new KarmaRepository(Context);
         }
     }
 }

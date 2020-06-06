@@ -7,8 +7,8 @@ namespace Jansk.Karma.Tests.Persistence
 {
     public class BaseKarmaContextTests : IDisposable
     {
-        protected string _databaseFilename;
-        protected KarmaContext _context;
+        private string _databaseFilename;
+        protected KarmaContext Context;
         
         protected void InitContext()
         {
@@ -16,14 +16,14 @@ namespace Jansk.Karma.Tests.Persistence
             {
                 _databaseFilename = Guid.NewGuid().ToString();
             }
-            _context?.Dispose();
-            _context = new KarmaContext(_databaseFilename);
-            _context.Database.Migrate();
+            Context?.Dispose();
+            Context = new KarmaContext(_databaseFilename);
+            Context.Database.Migrate();
         }
 
         public virtual void Dispose()
         {
-            _context?.Dispose();
+            Context?.Dispose();
             if (File.Exists(_databaseFilename))
             {
                 File.Delete(_databaseFilename);
