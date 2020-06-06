@@ -2,19 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Jansk.Karma.Plugins;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Jansk.Karma.Tests.Plugins
 {
     public class MessageMatchingTests
     {
-        private readonly ITestOutputHelper output;
-
-        public MessageMatchingTests(ITestOutputHelper output)
-        {
-            this.output = output;
-        }
-
         public static IEnumerable<object[]> GetValidInputs()
         {
             return GenerateArgumentsFromInputs(
