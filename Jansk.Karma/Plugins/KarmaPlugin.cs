@@ -53,7 +53,7 @@ namespace Jansk.Karma.Plugins
             var indexOfBeginningOfName = beginningOfNameMatch.Length;
             
             var nameToEnd = matchedText.Substring(indexOfBeginningOfName);
-            return nameToEnd.Contains(" ") ? nameToEnd.Substring(0, nameToEnd.IndexOf(" ")) : nameToEnd;
+            return nameToEnd.Contains(" ") ? nameToEnd.Substring(0, nameToEnd.IndexOf(" ", StringComparison.Ordinal)) : nameToEnd;
         }
         
         public ChangeRequest ParseKarmaChangeWithReason(string matchedText)
