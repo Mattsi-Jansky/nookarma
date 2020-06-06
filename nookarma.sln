@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jansk.Karma", "Jansk.Karma\Jansk.Karma.csproj", "{7EE39FB7-5F40-4B26-A947-B3419BC471A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jansk.Karma.Tests", "Jansk.Karma.Tests\Jansk.Karma.Tests.csproj", "{49BDCCC4-ABA6-44CF-A1C0-E8BBB049368C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EE39FB7-5F40-4B26-A947-B3419BC471A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE39FB7-5F40-4B26-A947-B3419BC471A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE39FB7-5F40-4B26-A947-B3419BC471A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE39FB7-5F40-4B26-A947-B3419BC471A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BDCCC4-ABA6-44CF-A1C0-E8BBB049368C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BDCCC4-ABA6-44CF-A1C0-E8BBB049368C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BDCCC4-ABA6-44CF-A1C0-E8BBB049368C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BDCCC4-ABA6-44CF-A1C0-E8BBB049368C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
