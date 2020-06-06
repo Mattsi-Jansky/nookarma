@@ -1,5 +1,7 @@
 # Nookarma
 
+![Run tests](https://github.com/Mattsi-Jansky/nookarma/workflows/Run%20tests/badge.svg)
+
 ## About
 
 A karma middleware for the Slack bot framework Noobot. Do you remember karma bots from back in the IRC days? They worked like this:
