@@ -1,3 +1,5 @@
+**Archiving this plugin because the framework it is for, Noobot, is unmaintained and archived**
+
 # Nookarma
 
 ![Run tests](https://github.com/Mattsi-Jansky/nookarma/workflows/Run%20tests/badge.svg)
